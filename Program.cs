@@ -1,7 +1,14 @@
+using crudMysql.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<PruebaContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("crudMySql"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.30-mysql")));
 
 var app = builder.Build();
 
