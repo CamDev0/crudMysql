@@ -4,7 +4,7 @@ Crud con .Net core, C#, Entity framework, mysql.
 Pasos:
 
 1. Crear un proyecto ASP.Net core web aplication (MVC)
-2. Instalar los nugets pomelo.entityF..C...mysql y tools de entity framework core.
+2. Instalar los nugets pomelo.entityFrameworkCore.mysql y el .tools en la solución.
 3. Creamos la DB y las tablas en mysql.
 4. Entramos a la consola del nugget y hacemos el mapeo de la DB. Ej: Scaffold-DbContext "Server = localhost; port=3306; database = prueba; uid = prueba; password = prueba" Pomelo.EntityFrameworkCore.MySql -o Models
 5. Movemos el connection string al Json para mejorar la seguridad.En este artículo explican como modificar el Json y el program.  http://go.microsoft.com/fwlink/?LinkId=723263
